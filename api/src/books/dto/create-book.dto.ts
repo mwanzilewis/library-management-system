@@ -2,20 +2,20 @@ import { IsString, IsNotEmpty, IsInt, Min } from 'class-validator';
 export class CreateBookDto {
   @IsString()
   @IsNotEmpty()
-  title: string;
+  title!: string;
 
   @IsString()
   @IsNotEmpty()
-  author: string;
+  author!: string;
 
   @IsString()
   @IsNotEmpty()
-  isbn: string;
+  isbn!: string;
 
   @IsInt()
   @Min(1)
-  totalCopies: number;
+  totalCopies!: number;
 
   @IsInt()
-  genreId: number;
+  genreId!: number;
 }
