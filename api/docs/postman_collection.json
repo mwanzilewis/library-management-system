@@ -1,0 +1,18 @@
+{
+  "info": { "name": "Library API", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json" },
+  "item": [
+    { "name": "Register", "request": { "method": "POST", "url": "http://localhost:3000/auth/register", "body": { "mode": "raw", "raw": "{\"name\":\"Lib\",\"email\":\"librarian@test.com\",\"password\":\"password123\",\"role\":\"LIBRARIAN\"}" } } },
+    { "name": "Login", "request": { "method": "POST", "url": "http://localhost:3000/auth/login", "body": { "mode": "raw", "raw": "{\"email\":\"librarian@test.com\",\"password\":\"password123\"}" } } },
+    { "name": "Get Profile", "request": { "method": "GET", "url": "http://localhost:3000/users/profile" } },
+    { "name": "Create Genre", "request": { "method": "POST", "url": "http://localhost:3000/genres", "body": { "mode": "raw", "raw": "{\"name\":\"Fiction\"}" } } },
+    { "name": "Get All Genres", "request": { "method": "GET", "url": "http://localhost:3000/genres" } },
+    { "name": "Get Genre", "request": { "method": "GET", "url": "http://localhost:3000/genres/1" } },
+    { "name": "Update Genre", "request": { "method": "PATCH", "url": "http://localhost:3000/genres/1", "body": { "mode": "raw", "raw": "{\"name\":\"Updated\"}" } } },
+    { "name": "Delete Genre", "request": { "method": "DELETE", "url": "http://localhost:3000/genres/1" } },
+    { "name": "Create Book", "request": { "method": "POST", "url": "http://localhost:3000/books", "body": { "mode": "raw", "raw": "{\"title\":\"Test\",\"author\":\"Author\",\"isbn\":\"123\",\"totalCopies\":5,\"genreId\":1}" } } },
+    { "name": "Get Books - filter search pagination", "request": { "method": "GET", "url": "http://localhost:3000/books?genreId=1&search=ngugi&page=1&limit=10" } },
+    { "name": "Get Book", "request": { "method": "GET", "url": "http://localhost:3000/books/1" } },
+    { "name": "Update Book", "request": { "method": "PATCH", "url": "http://localhost:3000/books/1", "body": { "mode": "raw", "raw": "{\"title\":\"Updated\"}" } } },
+    { "name": "Delete Book", "request": { "method": "DELETE", "url": "http://localhost:3000/books/1" } }
+  ]
+}
